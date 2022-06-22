@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+
+          {% for student in students %}
+            <dl class="">
+              <dt>Student ID: {{ student.student_id }}</dt>
+              <dd>First Name: {{ student.first_name }}</dd>
+              <dd>Last Name: {{ student.last_name }}</dd>
+              <dd>Student Email: {{ student.email }}</dd>
+            </dl>
+          {% else %}
+            <h3>No users yet !</h3>
+          {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}
